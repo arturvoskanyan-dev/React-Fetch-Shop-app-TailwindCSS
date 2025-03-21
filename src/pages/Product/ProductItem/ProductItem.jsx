@@ -1,6 +1,7 @@
 import React from 'react'
 
-const ProductItem = ({images, description, price, rating, category, stock, brand, dw, dh, dd, warrantyInformation, shippingInformation, policy, md, mu, db}) => {
+const ProductItem = ({images, description, price, rating, category, stock, brand, 
+    dw, dh, dd, warrantyInformation, shippingInformation, policy, md, mu, db}) => {
     return (
         <section>
             <div className="flex justify-evenly p-6">
@@ -15,7 +16,7 @@ const ProductItem = ({images, description, price, rating, category, stock, brand
                         </tr>
                         <tr >
                             <td>Price:</td>
-                            <td>{price}</td>
+                            <td>{parseFloat(price)}</td>
                         </tr>
                         <tr className='bg-gray-300'>
                             <td >Rating:</td>
