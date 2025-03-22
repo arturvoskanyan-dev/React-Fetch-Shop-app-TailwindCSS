@@ -6,7 +6,7 @@ import play from "../../assets/Play_Store.png"
 
 const Footer = () => {
     return (
-        <footer className='mt-22'>
+        <footer>
             <section className='flex justify-evenly items-top bg-[#1ABCFE] text-white p-12'>
                 <div className='flex flex-col gap-3'>
                     <h1 className='text-3xl font-bold cursor-pointer'>MegaMart</h1>

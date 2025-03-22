@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BasketItem from './BasketItem/BasketItem';
 
 const Basket = () => {
     const data = JSON.parse(localStorage.getItem("data"))
 
     return (
-        <div>
+        <div className='my-12'>
             {
                 data?.map((d) => {
                     return (

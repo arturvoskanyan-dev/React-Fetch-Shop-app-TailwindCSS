@@ -18,7 +18,7 @@ const Home = ({onBasket}) => {
     }, [])
 
     return (
-        <div className='p-12'>
+        <div className='p-24'>
             <section className='p-8'>
                 <div>
                     <h1 className='text-gray-600 p-8 underline decoration-2 decoration-[#1ABCFE] underline-offset-8'>

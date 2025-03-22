@@ -2,9 +2,8 @@ import React from 'react'
 import { NavLink, FaStar } from "../index"
 
 const CardItem = ({ to, id, title, images, price, rating, onBasket }) => {
-    console.log(onBasket);
     return (
-        <div className='border-1 border-gray-300 rounded-lg m-2'>
+        <div className='border-1 border-gray-300 rounded-lg m-2 transition-all hover:shadow-2xl'>
             <NavLink to={to}>
                 <img
                     className='bg-gray-100 w-[200px]'

@@ -6,7 +6,7 @@ import { BiSolidOffer } from "react-icons/bi";
 
 const Header = () => {
     return (
-        <header>
+        <header className='fixed top-0 left-0 z-50 w-screen shadow-lg'>
             <section className='flex justify-around p-2 bg-gray-200 text-gray-600'>
                 <div>
                     <h3>Welcome to worldwide MegaMart!</h3>

@@ -11,7 +11,7 @@ const Mens = ({onBasket}) => {
     }, [])
 
     return (
-        <section className='p-8'>
+        <section className='p-24'>
             <div className='flex justify-around flex-wrap p-12'>
                 {data?.map((d) => (
                     <CardItem

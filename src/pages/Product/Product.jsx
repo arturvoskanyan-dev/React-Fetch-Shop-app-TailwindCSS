@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import {ProductItem} from "../index"
 
-const Product = () => {
+const Product = ({onBasket}) => {
     const [data, setData] = useState([])
     const { id } = useParams();
     console.log(id);
@@ -20,6 +20,7 @@ const Product = () => {
                     return (
                         <ProductItem 
                             key={d.id}
+                            id={d.id}
                             images={d.images[0]}
                             description={d.description}
                             price={d.price}
@@ -36,6 +37,7 @@ const Product = () => {
                             md={d.meta.createdAt}
                             mu={d.meta.updatedAt}
                             db={d.meta.barcode}
+                            onBasket={onBasket}
                         />
                     )
                 })

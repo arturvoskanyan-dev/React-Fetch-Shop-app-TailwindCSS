@@ -1,10 +1,8 @@
-import React from 'react'
-
-const ProductItem = ({images, description, price, rating, category, stock, brand, 
-    dw, dh, dd, warrantyInformation, shippingInformation, policy, md, mu, db}) => {
+const ProductItem = ({ id, images, description, price, rating, category, stock, brand, 
+    dw, dh, dd, warrantyInformation, shippingInformation, policy, md, mu, db, onBasket}) => {
     return (
         <section>
-            <div className="flex justify-evenly p-6">
+            <div className="flex justify-evenly py-24">
                 <div>
                     <img src={images} className='w-[400px]' />
                 </div>
@@ -72,6 +70,12 @@ const ProductItem = ({images, description, price, rating, category, stock, brand
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className='text-center'>
+                <button className='bg-[#1ABCFE] text-white rounded-[12px] p-2 w-[120px] cursor-pointer transition-colors hover:bg-blue-500' 
+                onClick={() => onBasket(id)}>
+                    Buy
+                </button>
             </div>
         </section>
     )

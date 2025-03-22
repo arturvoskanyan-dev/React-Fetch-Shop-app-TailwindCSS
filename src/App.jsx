@@ -43,7 +43,7 @@ function App() {
           <Route path='/mens' element={<Mens onBasket={basketClick} />} />
           <Route path='/womens' element={<Womens onBasket={basketClick} />} />
           <Route path='/basket' element={<Basket />} />
-          <Route path='/:id' element={<Product />} />
+          <Route path='/:id' element={<Product onBasket={basketClick} />} />
         </Route>
       </Routes>
     </div>

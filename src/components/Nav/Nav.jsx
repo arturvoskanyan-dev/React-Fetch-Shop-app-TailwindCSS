@@ -2,11 +2,12 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { FiSearch } from "react-icons/fi";
 import { SlBasket } from "react-icons/sl";
+import GoBack from '../GoBack/GoBack';
 
 const Nav = () => {
   return (
     <nav>
-        <section className='flex justify-around items-center p-4 border-1 border-gray-300'>
+        <section className='flex justify-around items-center bg-white p-4 border-1 border-gray-300'>
             <div>
                 <h1 className='text-[#1ABCFE] text-2xl font-medium cursor-pointer'>MegaMart</h1>
             </div>
@@ -27,9 +28,10 @@ const Nav = () => {
                     <NavLink to="/womens"><li>Womens</li></NavLink>
                 </ul>
             </div>
-            <NavLink className='flex gap-2' to="/basket">
+            <NavLink className='flex items-center gap-2' to="/basket">
                 <SlBasket className='text-2xl text-[#1ABCFE] cursor-pointer' />
                 <h2 className='cursor-pointer'>Cart</h2>
+                <GoBack />
             </NavLink>
         </section>
     </nav>
