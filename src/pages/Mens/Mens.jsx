@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import CardItem from '../CardItem/CardItem';
 
-const Mens = () => {
+const Mens = ({onBasket}) => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -16,11 +16,13 @@ const Mens = () => {
                 {data?.map((d) => (
                     <CardItem
                         key={d.id}
+                        id={d.id}
                         to={`/${d.id}`}
-                        images={d.images[0]}
                         title={d.title}
                         price={d.price}
                         rating={d.rating}
+                        images={d.images[0]}
+                        onBasket={onBasket}
                     />
                 ))}
             </div>

@@ -1,7 +1,8 @@
 import React from 'react'
 import { NavLink, FaStar } from "../index"
 
-const CardItem = ({ to, title, images, price, rating }) => {
+const CardItem = ({ to, id, title, images, price, rating, onBasket }) => {
+    console.log(onBasket);
     return (
         <div className='border-1 border-gray-300 rounded-lg m-2'>
             <NavLink to={to}>
@@ -18,7 +19,7 @@ const CardItem = ({ to, title, images, price, rating }) => {
                 </span>
             </div>
             <div className='text-center p-4'>
-                <button className='bg-[#1ABCFE] text-white rounded-[12px] p-2 w-[120px] cursor-pointer transition-colors hover:bg-blue-500'>
+                <button className='bg-[#1ABCFE] text-white rounded-[12px] p-2 w-[120px] cursor-pointer transition-colors hover:bg-blue-500' onClick={() => onBasket(id)}>
                     Buy
                 </button>
             </div>

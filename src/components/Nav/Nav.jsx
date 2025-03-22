@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { FiSearch } from "react-icons/fi";
+import { SlBasket } from "react-icons/sl";
 
 const Nav = () => {
   return (
@@ -26,6 +27,10 @@ const Nav = () => {
                     <NavLink to="/womens"><li>Womens</li></NavLink>
                 </ul>
             </div>
+            <NavLink className='flex gap-2' to="/basket">
+                <SlBasket className='text-2xl text-[#1ABCFE] cursor-pointer' />
+                <h2 className='cursor-pointer'>Cart</h2>
+            </NavLink>
         </section>
     </nav>
   )

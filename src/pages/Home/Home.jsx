@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { CardItem } from "../index"
 
-const Home = () => {
+const Home = ({onBasket}) => {
     const [laptopsData, setLaptopsData] = useState([]);
     const [watches, setWatchesData] = useState([]);
 
@@ -32,11 +32,13 @@ const Home = () => {
                             return (
                                 <CardItem
                                     key={d.id}
+                                    id={d.id}
                                     to={`/${d.id}`}
                                     title={d.title}
                                     price={d.price}
                                     rating={d.rating}
                                     images={d.images[0]}
+                                    onBasket={onBasket}
                                 />
                             )
                         })
